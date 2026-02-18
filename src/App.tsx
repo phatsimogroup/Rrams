@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { useStore } from '@/store';
 import { Login } from '@/components/auth/Login';
 import { Layout } from '@/components/layout/Layout';
-import { Dashboard } from '@/modules/shared/Dashboard';
+import { RoleDashboard } from '@/components/common/RoleDashboard';
 import { MapViewer } from '@/modules/shared/MapViewer';
 import { RoadInventory } from '@/modules/shared/RoadInventory';
 import { Reports } from '@/modules/shared/Reports';
@@ -31,7 +31,7 @@ export const App: React.FC = () => {
             </ProtectedRoute>
           }
         >
-          <Route index element={<Dashboard />} />
+          <Route index element={<RoleDashboard />} />
           <Route path="map" element={<MapViewer />} />
           <Route path="inventory" element={<RoadInventory />} />
           <Route path="condition" element={<ConditionCapture />} />
